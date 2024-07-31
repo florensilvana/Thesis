@@ -46,9 +46,6 @@ train_y = d_train['rr_biner'].values
 
 rf_class=RandomForestClassifier(n_estimators=500,random_state=19,n_jobs=-1)
 rf_class.fit(train_x,train_y)
-#pickle.dump(rf_class,open(dir+"11.day_rfc1", 'wb'))
-# Perform 10-fold cross-validation
-# Multiply by -1 since sklearn calculates *negative* MAE
 kf = KFold(n_splits=10, random_state=19, shuffle=True)
 cv_scores = cross_val_score(rf_class, train_x, train_y, cv=kf)
 # Calculate the mean cross-validation score
@@ -62,9 +59,6 @@ train_y = t_train['rr_biner'].values
 
 rf_class=RandomForestClassifier(n_estimators=500,random_state=19,n_jobs=-1)
 rf_class.fit(train_x,train_y)
-#pickle.dump(rf_class,open(dir+"11.day_rfc1", 'wb'))
-# Perform 10-fold cross-validation
-# Multiply by -1 since sklearn calculates *negative* MAE
 kf = KFold(n_splits=10, random_state=19, shuffle=True)
 cv_scores = cross_val_score(rf_class, train_x, train_y, cv=kf)
 # Calculate the mean cross-validation score
@@ -78,9 +72,6 @@ train_y = n_train['rr_biner'].values
 
 rf_class=RandomForestClassifier(n_estimators=500,random_state=19,n_jobs=-1)
 rf_class.fit(train_x,train_y)
-#pickle.dump(rf_class,open(dir+"11.day_rfc1", 'wb'))
-# Perform 10-fold cross-validation
-# Multiply by -1 since sklearn calculates *negative* MAE
 kf = KFold(n_splits=10, random_state=19, shuffle=True)
 cv_scores = cross_val_score(rf_class, train_x, train_y, cv=kf)
 # Calculate the mean cross-validation score
@@ -97,9 +88,6 @@ train_y = alltimerd['classrr'].values
 
 rf_class=RandomForestClassifier(n_estimators=500,random_state=19,n_jobs=-1)
 rf_class.fit(train_x,train_y)
-#pickle.dump(rf_class,open(dir+"11.day_rfc2", 'wb'))
-# Perform 10-fold cross-validation
-# Multiply by -1 since sklearn calculates *negative* MAE
 kf = KFold(n_splits=10, random_state=19, shuffle=True)
 cv_scores = cross_val_score(rf_class, train_x, train_y, cv=kf)
 # Calculate the mean cross-validation score
@@ -114,9 +102,6 @@ train_y = alltimert['classrr'].values
 
 rf_class=RandomForestClassifier(n_estimators=500,random_state=19,n_jobs=-1)
 rf_class.fit(train_x,train_y)
-#pickle.dump(rf_class,open(dir+"11.day_rfc2", 'wb'))
-# Perform 10-fold cross-validation
-# Multiply by -1 since sklearn calculates *negative* MAE
 kf = KFold(n_splits=10, random_state=19, shuffle=True)
 cv_scores = cross_val_score(rf_class, train_x, train_y, cv=kf)
 # Calculate the mean cross-validation score
@@ -131,9 +116,6 @@ train_y = alltimern['classrr'].values
 
 rf_class=RandomForestClassifier(n_estimators=500,random_state=19,n_jobs=-1)
 rf_class.fit(train_x,train_y)
-#pickle.dump(rf_class,open(dir+"11.day_rfc2", 'wb'))
-# Perform 10-fold cross-validation
-# Multiply by -1 since sklearn calculates *negative* MAE
 kf = KFold(n_splits=10, random_state=19, shuffle=True)
 cv_scores = cross_val_score(rf_class, train_x, train_y, cv=kf)
 # Calculate the mean cross-validation score
@@ -149,9 +131,6 @@ train_y = alltimereg['rr'].values
 
 rf_class=RandomForestRegressor(n_estimators=500,random_state=19,n_jobs=-1)
 rf_class.fit(train_x,train_y)
-#pickle.dump(rf_class,open(dir+"11.day_rfr1", 'wb'))
-# Perform 10-fold cross-validation
-# Multiply by -1 since sklearn calculates *negative* MAE
 kf = KFold(n_splits=10, random_state=19, shuffle=True)
 cv_scores = -1 * cross_val_score(rf_class, train_x, train_y, cv=kf, scoring='neg_mean_absolute_error')
 # Calculate the mean cross-validation score
@@ -166,9 +145,6 @@ train_y = alltimeregt['rr'].values
 
 rf_class=RandomForestRegressor(n_estimators=500,random_state=19,n_jobs=-1)
 rf_class.fit(train_x,train_y)
-#pickle.dump(rf_class,open(dir+"11.twi_rfr1", 'wb'))
-# Perform 10-fold cross-validation
-# Multiply by -1 since sklearn calculates *negative* MAE
 kf = KFold(n_splits=10, random_state=19, shuffle=True)
 cv_scores = -1 * cross_val_score(rf_class, train_x, train_y, cv=kf, scoring='neg_mean_absolute_error')
 # Calculate the mean cross-validation score
@@ -183,9 +159,6 @@ train_y = alltimeregn['rr'].values
 
 rf_class=RandomForestRegressor(n_estimators=500,random_state=19,n_jobs=-1)
 rf_class.fit(train_x,train_y)
-#pickle.dump(rf_class,open(dir+"11.day_rfr1", 'wb'))
-# Perform 10-fold cross-validation
-# Multiply by -1 since sklearn calculates *negative* MAE
 kf = KFold(n_splits=10, random_state=19, shuffle=True)
 cv_scores = -1 * cross_val_score(rf_class, train_x, train_y, cv=kf, scoring='neg_mean_absolute_error')
 # Calculate the mean cross-validation score
@@ -201,9 +174,6 @@ train_y = alltimereg['rr'].values
 
 rf_class=RandomForestRegressor(n_estimators=500,random_state=19,n_jobs=-1)
 rf_class.fit(train_x,train_y)
-#pickle.dump(rf_class,open(dir+"11.day_rfr1", 'wb'))
-# Perform 10-fold cross-validation
-# Multiply by -1 since sklearn calculates *negative* MAE
 kf = KFold(n_splits=10, random_state=19, shuffle=True)
 cv_scores = -1 * cross_val_score(rf_class, train_x, train_y, cv=kf, scoring='neg_mean_absolute_error')
 # Calculate the mean cross-validation score
@@ -218,9 +188,6 @@ train_y = alltimeregt['rr'].values
 
 rf_class=RandomForestRegressor(n_estimators=500,random_state=19,n_jobs=-1)
 rf_class.fit(train_x,train_y)
-#pickle.dump(rf_class,open(dir+"11.twi_rfr1", 'wb'))
-# Perform 10-fold cross-validation
-# Multiply by -1 since sklearn calculates *negative* MAE
 kf = KFold(n_splits=10, random_state=19, shuffle=True)
 cv_scores = -1 * cross_val_score(rf_class, train_x, train_y, cv=kf, scoring='neg_mean_absolute_error')
 # Calculate the mean cross-validation score
@@ -235,9 +202,6 @@ train_y = alltimeregn['rr'].values
 
 rf_class=RandomForestRegressor(n_estimators=500,random_state=19,n_jobs=-1)
 rf_class.fit(train_x,train_y)
-#pickle.dump(rf_class,open(dir+"11.day_rfr1", 'wb'))
-# Perform 10-fold cross-validation
-# Multiply by -1 since sklearn calculates *negative* MAE
 kf = KFold(n_splits=10, random_state=19, shuffle=True)
 cv_scores = -1 * cross_val_score(rf_class, train_x, train_y, cv=kf, scoring='neg_mean_absolute_error')
 # Calculate the mean cross-validation score
@@ -254,9 +218,6 @@ train_y = alltimereg['rr'].values
 
 rf_class=RandomForestRegressor(n_estimators=500,random_state=19,n_jobs=-1)
 rf_class.fit(train_x,train_y)
-#pickle.dump(rf_class,open(dir+"11.day_rfr1", 'wb'))
-# Perform 10-fold cross-validation
-# Multiply by -1 since sklearn calculates *negative* MAE
 kf = KFold(n_splits=10, random_state=19, shuffle=True)
 cv_scores = -1 * cross_val_score(rf_class, train_x, train_y, cv=kf, scoring='neg_mean_absolute_error')
 # Calculate the mean cross-validation score
@@ -271,9 +232,6 @@ train_y = alltimeregt['rr'].values
 
 rf_class=RandomForestRegressor(n_estimators=500,random_state=19,n_jobs=-1)
 rf_class.fit(train_x,train_y)
-#pickle.dump(rf_class,open(dir+"11.day_rfr1", 'wb'))
-# Perform 10-fold cross-validation
-# Multiply by -1 since sklearn calculates *negative* MAE
 kf = KFold(n_splits=10, random_state=19, shuffle=True)
 cv_scores = -1 * cross_val_score(rf_class, train_x, train_y, cv=kf, scoring='neg_mean_absolute_error')
 # Calculate the mean cross-validation score
@@ -288,9 +246,6 @@ train_y = alltimeregn['rr'].values
 
 rf_class=RandomForestRegressor(n_estimators=500,random_state=19,n_jobs=-1)
 rf_class.fit(train_x,train_y)
-#pickle.dump(rf_class,open(dir+"11.day_rfr1", 'wb'))
-# Perform 10-fold cross-validation
-# Multiply by -1 since sklearn calculates *negative* MAE
 kf = KFold(n_splits=10, random_state=19, shuffle=True)
 cv_scores = -1 * cross_val_score(rf_class, train_x, train_y, cv=kf, scoring='neg_mean_absolute_error')
 # Calculate the mean cross-validation score
@@ -307,9 +262,6 @@ train_y = alltimereg['rr'].values
 
 rf_class=RandomForestRegressor(n_estimators=500,random_state=19,n_jobs=-1)
 rf_class.fit(train_x,train_y)
-#pickle.dump(rf_class,open(dir+"11.day_rfr1", 'wb'))
-# Perform 10-fold cross-validation
-# Multiply by -1 since sklearn calculates *negative* MAE
 kf = KFold(n_splits=10, random_state=19, shuffle=True)
 cv_scores = -1 * cross_val_score(rf_class, train_x, train_y, cv=kf, scoring='neg_mean_absolute_error')
 # Calculate the mean cross-validation score
@@ -324,9 +276,6 @@ train_y = alltimeregt['rr'].values
 
 rf_class=RandomForestRegressor(n_estimators=500,random_state=19,n_jobs=-1)
 rf_class.fit(train_x,train_y)
-#pickle.dump(rf_class,open(dir+"11.day_rfr1", 'wb'))
-# Perform 10-fold cross-validation
-# Multiply by -1 since sklearn calculates *negative* MAE
 kf = KFold(n_splits=10, random_state=19, shuffle=True)
 cv_scores = -1 * cross_val_score(rf_class, train_x, train_y, cv=kf, scoring='neg_mean_absolute_error')
 # Calculate the mean cross-validation score
@@ -341,9 +290,6 @@ train_y = alltimeregn['rr'].values
 
 rf_class=RandomForestRegressor(n_estimators=500,random_state=19,n_jobs=-1)
 rf_class.fit(train_x,train_y)
-#pickle.dump(rf_class,open(dir+"11.day_rfr1", 'wb'))
-# Perform 10-fold cross-validation
-# Multiply by -1 since sklearn calculates *negative* MAE
 kf = KFold(n_splits=10, random_state=19, shuffle=True)
 cv_scores = -1 * cross_val_score(rf_class, train_x, train_y, cv=kf, scoring='neg_mean_absolute_error')
 # Calculate the mean cross-validation score
